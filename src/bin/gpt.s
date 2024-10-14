@@ -14,4 +14,5 @@ struc GPT_HEADER
         .NumberOfPartitionEntries:      UINT32
         .SizeOfPartitionEntry:          UINT32
         .PartitionEntryArrayCRC32:      UINT32
+        .Reserved2:                     UINT32   
 endstruc

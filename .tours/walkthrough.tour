@@ -14,8 +14,8 @@
     },
     {
       "file": "src/bin/uefi.s",
-      "description": "**11 - 16:** \nThese lines are also directly from the UEFI Specification \n(See: [Handoff State][1])\n\nThe pointer to the subsytem is provided in `rsp`, the handle to image resources in in `rcx`, pointer to the system table is in `rdx`, so save all these to our defined memory locations\n\nWe also shift the top of stack to allow for four arguments, again, as per the spec.\n\n[1]: https://uefi.org/sites/default/files/resources/UEFI_Spec_2_10_A_Aug8.pdf#G11.1004788",
-      "line": 10
+      "description": "**13 - 16:** \nThese lines are also directly from the UEFI Specification \n(See: [Handoff State][1])\n\nThe pointer to the subsytem is provided in `rsp`, the handle to image resources in in `rcx`, pointer to the system table is in `rdx`, so save all these to our defined memory locations\n\nWe also shift the top of stack to allow for four arguments, again, as per the spec.\n\n[1]: https://uefi.org/sites/default/files/resources/UEFI_Spec_2_10_A_Aug8.pdf#G11.1004788",
+      "line": 13
     },
     {
       "file": "src/bin/uefi.s",

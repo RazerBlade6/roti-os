@@ -23,6 +23,13 @@ start:
     call exitBootSequence
     call loadKernel
 
+setupProtectiveMbr:
+    mov rax, [ptrLBA0]
+    mov rax, [rax + MASTER_BOOT_RECORD.BootStrapCode]
+    mov [rax], ptrLBA0
+
+    call [rax]
+
 getFrameBuffer:
     call locateProtocol
     
@@ -70,6 +77,7 @@ section .data
         descriptorSize              dq   0
         descriptorVersion           dd   0
         frameBuffer                 dq   0
+        ptrLBA0                     dq   0
 
         bootStrapCode     times 440 db   0
         uniqueMbrSignature          dd   0
